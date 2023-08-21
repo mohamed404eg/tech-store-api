@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mega_menus",
+  "info": {
+    "singularName": "mega-menu",
+    "pluralName": "mega-menus",
+    "displayName": "MegaMenu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "dropdown": {
+      "type": "boolean",
+      "default": false
+    },
+    "mega_menu_dropdowns": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mega-menu-dropdown.mega-menu-dropdown",
+      "mappedBy": "mega_menu"
+    }
+  }
+}

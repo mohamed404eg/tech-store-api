@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "in stock",
+        "check availability"
+      ]
+    },
+    "currentprice": {
+      "type": "decimal"
+    },
+    "afterdiscount": {
+      "type": "decimal"
+    },
+    "color": {
+      "type": "json"
+    },
+    "CPU": {
+      "type": "string",
+      "default": "N/A"
+    },
+    "Featured": {
+      "type": "string",
+      "default": "N/A"
+    },
+    "I_O_Ports": {
+      "type": "string",
+      "default": "N/A"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "products"
+    },
+    "barnds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::barnd.barnd",
+      "mappedBy": "products"
+    },
+    "images": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "featuers": {
+      "type": "json"
+    },
+    "images2": {
+      "type": "text"
+    }
+  }
+}

@@ -9,12 +9,15 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
+  },
   "dependencies": {
-    "@strapi/strapi": "4.12.5",
-    "@strapi/plugin-users-permissions": "4.12.5",
     "@strapi/plugin-i18n": "4.12.5",
-    "mysql": "2.18.1"
+    "@strapi/plugin-users-permissions": "4.12.5",
+    "@strapi/strapi": "4.12.5",
+    "mysql": "2.18.1",
+    "strapi-random-sort": "^0.0.2"
   },
   "author": {
     "name": "A Strapi developer"

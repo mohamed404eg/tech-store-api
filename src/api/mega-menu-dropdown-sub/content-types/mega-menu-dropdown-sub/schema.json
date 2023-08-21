@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mega_menu_dropdown_subs",
+  "info": {
+    "singularName": "mega-menu-dropdown-sub",
+    "pluralName": "mega-menu-dropdown-subs",
+    "displayName": "MegaMenuDropdownSub",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "mega_menu_dropdown": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::mega-menu-dropdown.mega-menu-dropdown",
+      "inversedBy": "mega_menu_dropdown_subs"
+    },
+    "count": {
+      "type": "integer"
+    }
+  }
+}
